@@ -1,3 +1,6 @@
+ import firebase from 'firebase'
+ import firestore from 'firebase/firestore'
+
  // Initialize Firebase
  var config = {
     apiKey: "AIzaSyCxaZaHS9HfRKub1E5RmxT12jCiCGpi9mM",
@@ -7,4 +10,7 @@
     storageBucket: "smoothies-e64fb.appspot.com",
     messagingSenderId: "6797556539"
   };
-  firebase.initializeApp(config);
+  const firebaseApp = firebase.initializeApp(config);
+  firebaseApp.firestore().settings({timestampsInSnapshots: true})
+
+  export default firebaseApp.firestore();

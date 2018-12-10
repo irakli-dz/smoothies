@@ -4,6 +4,12 @@
 
 <script>
 export default {
+    name: 'Addsmoothie',
+    data() {
+        return {
+
+        }
+    }
 
 }
 </script>
